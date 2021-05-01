@@ -38,7 +38,7 @@ class App extends React.Component {
                 "id":5,
                 "name":"Schindler's List(Schindler'in Listesi)",
                 "rating":8.9,
-                "overview":"Gerçek bir hayat hikayesinden uyarlanan film, Oskar Schindler adlı bir Alman işadamının 2. Dünya Savaşı sırasında Polonya'da kurduğu fabrikada Yahudi işçileri çalıştırmaya başlaması ve bu sayede 1100 Yahudi'nin hayatını kurtarmasını konu alıyor. Steven Spielberg'in en önemli yapıtları arasında sayılan ve ünlü yönetmene Oscar kazandıran film, 1994 yılında 12 dalda Oscar'a aday olmuş ve 7 dalda kazanmıştı. Filmin kazandığı Oscar'lar : En İyi Film, Yönetim, Kurgu, Sanat Yönetimi, Görüntü, Özgün Müzik ve Senaryo Uyarlaması.",
+                "overview":"Gerçek bir hayat hikayesinden uyarlanan film, Oskar Schindler adlı bir Alman işadamının 2. Dünya Savaşı sırasında Polonya'da kurduğu fabrikada Yahudi işçileri çalıştırmaya başlaması ve bu sayede 1100 Yahudi'nin hayatını kurtarmasını konu alıyor. Steven Spielberg'in en önemli yapıtları arasında sayılan ve ünlü yönetmene Oscar kazandıran film, 1994 yılında 12 dalda Oscar'a aday olmuş ve 7 dalda kazanmıştı.",
                 "imageURL":"https://www.themoviedb.org/t/p/original/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg"
             },
             {

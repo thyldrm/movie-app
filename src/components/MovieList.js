@@ -17,13 +17,14 @@ class MovieList extends Component {
                             <div className="d-flex justify-content-between align-items-center">
                                 <button type="button" className="btn btn-md btn-outline-danger">Delete</button>
                                 <h2>
-                                    <span className="badge badge-info">8.2</span>
+                                    <span className="badge badge-info">9.9</span>
                                 </h2>
                             </div>
-
                         </div>
                     </div>
+                    project is being updated.......
                 </div>
+                
             </div>
         )
     }
