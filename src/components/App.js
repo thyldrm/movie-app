@@ -69,7 +69,8 @@ class App extends React.Component {
                 "overview":"18.yüzyıl sonlarında, sınıf bilincinin hakim olduğu İngiltere'de beş kız kardeş olan Bennet'lar - Elizabeth veya Lizzie, Jane, Lydia, Mary ve Kitty, annelerinin iyi bir koca bulup geleceklerini güvence altına alma hayalleriyle büyütülmüşlerdir. Fakat, neşeli ve zeki bir mizaca sahip olan Elizabeth, kendisine düşkün olan babasının da desteğiyle hayatını daha farklı ve dolu dolu yaşamak için çabalamaktadır.",
                 "imageURL":"https://www.themoviedb.org/t/p/original/8rps0oYelhGzn5a6VpYzndf5hQZ.jpg"
             }
-        ]
+        ],
+        searchQuery:""
     }
 
     deleteMovie = (movie) => {
@@ -80,16 +81,27 @@ class App extends React.Component {
         }))
     }
 
+    seachMovie=(event)=>{
+        this.setState({searchQuery: event.target.value})
+    }
+
     render(){
+        
+        let filteredMovies = this.state.movies.filter(
+            (movie) => {
+                return movie.name.toLocaleLowerCase().indexOf(this.state.searchQuery.toLocaleLowerCase()) !== -1;
+            }
+        )
+
         return (
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
-                        <SearchBar/>
+                        <SearchBar searchMovieProp={this.seachMovie}/>
                     </div>
                 </div>
                 <MovieList
-                movies={this.state.movies}
+                movies={filteredMovies}
                 deleteMovieProp={this.deleteMovie}
                 />
             </div>
