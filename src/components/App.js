@@ -36,6 +36,13 @@ class App extends React.Component {
         this.setState({searchQuery: event.target.value})
     }
 
+    addMovie = async (movie) => {
+        await axios.post("http://localhost:3002/movies",movie)
+        this.setState(state => ({
+            movies:state.movies.concat([movie])
+        }))
+    }
+
     render(){
         
         let filteredMovies = this.state.movies.filter(
@@ -46,32 +53,47 @@ class App extends React.Component {
 
         return (
             <Router>
-
                 <div className="container">
-                <Switch>
-                <Route path="/" exact render={() => (
-                    <React.Fragment>
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <SearchBar searchMovieProp={this.seachMovie}/>
-                            </div>
-                        </div>
-                    
-                        <MovieList
-                        movies={filteredMovies}
-                        deleteMovieProp={this.deleteMovie}
-                        />
-                    </React.Fragment>
-                )}>
-                        
-                </Route>
+                    <Switch>
+                        <Route path="/" exact render={()=>(
+                            <React.Fragment>
+                                <div className="row">
+                                    <div className="col-lg-12">
+                                        <SearchBar searchMovieProp={this.searchMovie}/>
+                                    </div>
+                                </div>
+                            
+                                <MovieList 
+                                    movies={filteredMovies}
+                                    deleteMovieProp={this.deleteMovie}
+                                />
+                            </React.Fragment>
+                        )}>
+                                
+                        </Route>
 
-                <Route path="/add" component={AddMovie}/>
-                </Switch>
+                        <Route path="/add" exact render={({history})=>(
+                            <AddMovie 
+                                onAddMovie = {(movie) => {this.addMovie(movie)
+                                    history.push("/")
+                                }
+                            }
+                            />
+                        )}>
+                                
+                        </Route>
+
+                        
+
+                        
+                        
+                        
+                    </Switch>
+
                 </div>
 
             </Router>
-        )
+        );
     }
 }
 

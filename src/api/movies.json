@@ -57,11 +57,18 @@
       "imageURL": "https://www.themoviedb.org/t/p/original/6QMSLvU5ziIL2T6VrkaKzN2YkxK.jpg"
     },
     {
-        "id":9,
-        "name":"Pride & Prejudice(Aşk ve Gurur)",
-        "rating":7.8,
-        "overview":"18.yüzyıl sonlarında, sınıf bilincinin hakim olduğu İngiltere'de beş kız kardeş olan Bennet'lar - Elizabeth veya Lizzie, Jane, Lydia, Mary ve Kitty, annelerinin iyi bir koca bulup geleceklerini güvence altına alma hayalleriyle büyütülmüşlerdir. Fakat, neşeli ve zeki bir mizaca sahip olan Elizabeth, kendisine düşkün olan babasının da desteğiyle hayatını daha farklı ve dolu dolu yaşamak için çabalamaktadır.",
-        "imageURL":"https://www.themoviedb.org/t/p/original/8rps0oYelhGzn5a6VpYzndf5hQZ.jpg"
+      "id": 9,
+      "name": "Pride & Prejudice(Aşk ve Gurur)",
+      "rating": 7.8,
+      "overview": "18.yüzyıl sonlarında, sınıf bilincinin hakim olduğu İngiltere'de beş kız kardeş olan Bennet'lar - Elizabeth veya Lizzie, Jane, Lydia, Mary ve Kitty, annelerinin iyi bir koca bulup geleceklerini güvence altına alma hayalleriyle büyütülmüşlerdir. Fakat, neşeli ve zeki bir mizaca sahip olan Elizabeth, kendisine düşkün olan babasının da desteğiyle hayatını daha farklı ve dolu dolu yaşamak için çabalamaktadır.",
+      "imageURL": "https://www.themoviedb.org/t/p/original/8rps0oYelhGzn5a6VpYzndf5hQZ.jpg"
+    },
+    {
+      "name": "qwe",
+      "rating": "qwe",
+      "imageURL": "qwe",
+      "overview": "qwe",
+      "id": 10
     }
   ]
 }
