@@ -1,7 +1,13 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import MovieList from "./MovieList";
+import AddMovie from "./AddMovie";
 import axios from "axios";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+  } from "react-router-dom";
 
 class App extends React.Component {
 
@@ -39,17 +45,32 @@ class App extends React.Component {
         )
 
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <SearchBar searchMovieProp={this.seachMovie}/>
-                    </div>
+            <Router>
+
+                <div className="container">
+                <Switch>
+                <Route path="/" exact render={() => (
+                    <React.Fragment>
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <SearchBar searchMovieProp={this.seachMovie}/>
+                            </div>
+                        </div>
+                    
+                        <MovieList
+                        movies={filteredMovies}
+                        deleteMovieProp={this.deleteMovie}
+                        />
+                    </React.Fragment>
+                )}>
+                        
+                </Route>
+
+                <Route path="/add" component={AddMovie}/>
+                </Switch>
                 </div>
-                <MovieList
-                movies={filteredMovies}
-                deleteMovieProp={this.deleteMovie}
-                />
-            </div>
+
+            </Router>
         )
     }
 }

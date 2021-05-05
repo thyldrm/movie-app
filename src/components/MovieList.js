@@ -30,10 +30,6 @@ const MovieList = (props) => {
                         </div>
                     ))
                 }
-
-                    project is being updated.......
-                
-                
             </div>
         )
     
