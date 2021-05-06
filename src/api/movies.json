@@ -50,11 +50,11 @@
       "imageURL": "https://www.themoviedb.org/t/p/original/6KWnXYoV1htDT3TGYdFWucfTt6t.jpg"
     },
     {
-      "id": 8,
       "name": "GoodFellas (Sıkı Dostlar)",
       "rating": 8.7,
       "overview": "Gerçek bir hayat hikayesinden uyarlanan filmde Henry Hill adında bir gangster, Jimmy Conway ve Tommy De Vito adlı iki arkadaşıyla birlikte bir soyguna kalkışır. Gözleri daha yukarda olan iki arkadaşı soyguna katılan diğerlerini öldürür ve mafya içinde yükselmeye başlarlar. Bu durum Henry'i olumsuz etkilemiştir ve bu konuda birşeyler yapması gerekmektedir. Büyük usta Martin Scorsese'nin başyapıtlarından biri olan Goodfellas, 1991 yılında 6 dalda Oscar'a aday gösterilmiş, en iyi yardımcı erkek oyuncu dalında Joe Pesci'ye ödül kazandırmıştı.",
-      "imageURL": "https://www.themoviedb.org/t/p/original/6QMSLvU5ziIL2T6VrkaKzN2YkxK.jpg"
+      "imageURL": "https://www.themoviedb.org/t/p/original/6QMSLvU5ziIL2T6VrkaKzN2YkxK.jpg",
+      "id": 8
     },
     {
       "id": 9,

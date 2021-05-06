@@ -18,6 +18,10 @@ class App extends React.Component {
     }
 
     async componentDidMount(){
+        this.getMovies();
+    }
+
+    async getMovies(){
         const response = await axios.get("http://localhost:3002/movies")
         this.setState({movies: response.data})
     }
@@ -42,6 +46,12 @@ class App extends React.Component {
         this.setState(state => ({
             movies:state.movies.concat([movie])
         }))
+        this.getMovies();
+    }
+
+    editMovie = async (id,updatedMovie) => {
+        await axios.put(`http://localhost:3002/movies/${id}`,updatedMovie)
+        this.getMovies();
     }
 
     render(){
@@ -85,10 +95,20 @@ class App extends React.Component {
                         )}>
                                 
                         </Route>
-                        
-                        <Route path="/edit/:id" component={EditMovie}>
 
+                        <Route path="/edit/:id" exact render={(props)=>(
+                            <EditMovie 
+                                {...props}
+                                onEditMovie = {(id,movie) => {this.editMovie(id,movie)
+                                    
+                                }
+                            }
+                            />
+                        )}>
+                                
                         </Route>
+                        
+                        
             
                     </Switch>
 
